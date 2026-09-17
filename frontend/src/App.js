@@ -27,7 +27,7 @@ function Protected({ children, roles }) {
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL || "/"}>
         <Toaster position="top-right" richColors />
         <Routes>
           <Route path="/login" element={<Login />} />
