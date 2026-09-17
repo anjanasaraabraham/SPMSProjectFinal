@@ -17,7 +17,7 @@ api.interceptors.response.use(
       localStorage.removeItem("spms_token");
       localStorage.removeItem("spms_user");
       if (!window.location.pathname.includes("/login")) {
-        window.location.href = "/login";
+        window.location.href = `${process.env.PUBLIC_URL || ""}/login`;
       }
     }
     return Promise.reject(err);

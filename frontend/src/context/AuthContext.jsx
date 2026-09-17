@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("spms_token");
     localStorage.removeItem("spms_user");
     setUser(null);
-    window.location.href = "/login";
+    window.location.href = `${process.env.PUBLIC_URL || ""}/login`;
   };
 
   return (
